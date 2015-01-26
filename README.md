@@ -19,7 +19,6 @@ Random text generators:
   * `random-int`: Integer from 0 to max.
   * `random-int-faster`: Integer from 0 to max, skipping the seed.
   * `random-password`: Opimized password characters for high security needs.
-  * `random-password-encrypt`: Optimized password characters for high security needs with encryption.
   * `random-password-words`: Memorable password of four random words from a text file.
   * `random-seed`: Seed the bash random number generator using /dev/urandom
   * `random-uuid`: UUID,
