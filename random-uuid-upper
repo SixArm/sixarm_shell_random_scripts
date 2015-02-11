@@ -34,4 +34,4 @@ set -euf -o pipefail
 # Updated: 2015-01-25
 ##
 
-hexdump -n 16 -v -e '4/1 "%02X" "-" 2/1 "%02X" "-" 2/1 "%02X" "-" 2/1 "%02X" "-" 6/1 "%02X" "\n"' /dev/random | tr 'a-f' 'A-F'
+hexdump -n 16 -v -e '4/1 "%02X" "-" 2/1 "%02X" "-" 2/1 "%02X" "-" 2/1 "%02X" "-" 6/1 "%02X" "\n"' /dev/random
