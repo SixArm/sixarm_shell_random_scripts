@@ -1,4 +1,4 @@
-# SixArm.com » Shell » <br> Random scripts for generating text
+# Shell » <br> Random scripts for generating text
 
 All these methods generate random text by using the secure /dev/urandom source.
 
