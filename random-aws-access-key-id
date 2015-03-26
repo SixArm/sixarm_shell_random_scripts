@@ -1,0 +1,23 @@
+#!/bin/sh
+set -euf -o pipefail
+
+##
+# Generate a Amazon Web Services (AWS) Access Key Id.
+#
+# The string is alphanumeric uppercase and 20 characters.
+#
+# Usage:
+#
+#     random-aws-access-key-id
+#
+# Example:
+#
+#     $ random-aws-access-key-id
+#     XQX20V9LO8ARDI10QFVG
+#
+# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: GPL
+# Updated: 2015-03-26
+##
+
+random-alphanum-upper 20
