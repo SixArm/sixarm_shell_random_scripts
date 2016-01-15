@@ -22,9 +22,10 @@ Random text generators:
   * `random-password`: Opimized password characters for high security needs.
   * `random-password-words`: Memorable password of four random words from a text file.
   * `random-salt`: Alphanumeric A-Z a-z 0-9, suitatable for `mkpasswd` and `/etc/shadow`.
-  * `random-seed`: Seed the bash random number generator using /dev/urandom
-  * `random-uuid-upper`: UUID in upper case
-  * `random-uuid-lower`: UUID in lower case
+  * `random-seed`: Seed the bash random number generator using /dev/urandom.
+  * `random-sha-256`: SHA 256 appearance, A-Z a-z +, length 44.
+  * `random-uuid-upper`: UUID in upper case.
+  * `random-uuid-lower`: UUID in lower case.
   * `random-word-characters`: Word characters A-Z a-z and underscore.
   * `random-xid`: XID, which is 32 hexdecimal characters in lower case.
 

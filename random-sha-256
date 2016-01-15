@@ -1,0 +1,22 @@
+#!/bin/bash
+set -euf -o pipefail
+
+##
+# Generate a random string that looks like a SHA 256 checksum.
+#
+# Usage:
+#
+#     random-sha-256
+#
+# Example:
+#
+#     $ random-sha-256
+#     IBYMhAiRHPDJAamWSafFk+XirjkiTFqEGSFTOnWWTAVS
+#
+# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: GPL
+# Created: 2016-01-12
+# Updated: 2015-01-13
+##
+
+random-match A-Za-z\+ 44
