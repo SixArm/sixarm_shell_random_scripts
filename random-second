@@ -1,0 +1,22 @@
+#!/bin/sh
+
+##
+# Generate a random time second, in the range 0-59.
+#
+# Usage:
+#
+#     random-second
+#
+# Examples:
+#
+#     $ random-second
+#     #=> 59
+#
+# This script does NOT seed the shell random variable.
+#
+# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: GPL
+# Updated: 2015-10-18
+##
+
+echo $(( RANDOM % 60))
