@@ -1,0 +1,29 @@
+#!/bin/bash
+set -euf -o pipefail
+
+##
+# Generate a random ZID string.
+#
+# Usage:
+#
+#     random-zid
+#
+# Example:
+#
+#     $ random-zid
+#     902dba9dd7baf8f67038472d75d232e7
+#
+# The ZID specification is a 128-bit secure random number,
+# represented as 32 hexdecimal characters, lower case.
+#
+# This script uses the commands `hexdump` and `/dev/random`
+# to generate secure random numbers and format them.
+#
+# Version: 1.0.0
+# License: GPL
+# Created: 2015-01-25
+# Updated: 2016-01-15
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+##
+
+hexdump -n 16 -v -e '16/1 "%02x" "\n"' /dev/random

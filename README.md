@@ -29,7 +29,7 @@ Random text generators:
   * `random-uuid-upper`: UUID in upper case.
   * `random-uuid-lower`: UUID in lower case.
   * `random-word-characters`: Word characters A-Z a-z and underscore.
-  * `random-xid`: XID, which is 32 hexdecimal characters in lower case.
+  * `random-zid`: ZID, which is 32 hexdecimal characters, lower case.
 
 Random text generators for companies:
 
