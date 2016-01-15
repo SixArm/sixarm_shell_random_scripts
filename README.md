@@ -18,6 +18,7 @@ Random text generators:
   * `random-md5`: MD5 sum, calling the md5sum command.
   * `random-int`: Integer from 0 to max.
   * `random-int-faster`: Integer from 0 to max, skipping the seed.
+  * `random-ip-address`: Typical IP address a.b.c.d, all in 130-250 for readability.
   * `random-password`: Opimized password characters for high security needs.
   * `random-password-words`: Memorable password of four random words from a text file.
   * `random-salt`: Alphanumeric A-Z a-z 0-9, suitatable for `mkpasswd` and `/etc/shadow`.

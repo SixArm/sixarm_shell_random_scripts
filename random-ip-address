@@ -1,0 +1,26 @@
+#!/bin/sh
+set -euf
+
+##
+# Generate a random string that looks like an IP address.
+#
+# Usage:
+#
+#     random-ip-address
+#
+# Example:
+#
+#     $ random-ip-address
+#     128.129.130.131
+#
+# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: GPL
+# Created: 2016-01-12
+# Updated: 2015-01-13
+##
+
+a=$(( 130 + $(( $RANDOM % 120 ))))
+b=$(( 130 + $(( $RANDOM % 120 ))))
+c=$(( 130 + $(( $RANDOM % 120 ))))
+d=$(( 130 + $(( $RANDOM % 120 ))))
+echo "$a.$b.$c.$d"
