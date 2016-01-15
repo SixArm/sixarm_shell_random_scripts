@@ -15,7 +15,8 @@ Random text generators:
   * `random-hex-fingerprint`: Hex digits formatted as a fingerprint.
   * `random-mac-address`: A media access control address (MAC address).
   * `random-match`: Match a set of characters given as an argument.
-  * `random-md5`: MD5 sum, calling the md5sum command.
+  * `random-md5`: MD5 sum, calling either md5sum or md5 command.
+  * `random-md5-fingerprint`: MD5 sum fingerprint.
   * `random-int`: Integer from 0 to max.
   * `random-int-faster`: Integer from 0 to max, skipping the seed.
   * `random-ip-address`: Typical IP address a.b.c.d, all in 130-250 for readability.
@@ -24,6 +25,7 @@ Random text generators:
   * `random-salt`: Alphanumeric A-Z a-z 0-9, suitatable for `mkpasswd` and `/etc/shadow`.
   * `random-seed`: Seed the bash random number generator using /dev/urandom.
   * `random-sha-256`: SHA 256 appearance, A-Z a-z +, length 44.
+  * `random-ssh-fingerprint`: SSH fingerprint with SHA 256, IP address, type.
   * `random-uuid-upper`: UUID in upper case.
   * `random-uuid-lower`: UUID in lower case.
   * `random-word-characters`: Word characters A-Z a-z and underscore.

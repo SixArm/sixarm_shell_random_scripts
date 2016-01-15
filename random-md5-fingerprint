@@ -1,0 +1,24 @@
+#!/bin/sh
+set -euf
+
+##
+# Generate a random MD5 fingerprint string.
+#
+# Usage:
+#
+#     random-md5
+#
+# Example:
+#
+#     $ random-md5-fingerprint
+#     85:04:e2:7a:c1:10:dc:65:13:6e:33:20:2f:85:3e:be
+#
+# This implementation uses `random-md5`.
+#
+# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: GPL
+# Created: 2016-01-12
+# Updated: 2016-01-13
+##
+
+random-md5 | sed 's/\(..\)/\1:/g; s/:$//'
