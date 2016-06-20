@@ -16,7 +16,7 @@ set -euf -o pipefail
 # The ZID specification is a 128-bit secure random number,
 # represented as 32 hexdecimal characters, lower case.
 #
-# This script uses the commands `hexdump` and `/dev/random`
+# This script uses the commands `hexdump` and `/dev/urandom`
 # to generate secure random numbers and format them.
 #
 # Version: 1.0.0
@@ -26,4 +26,4 @@ set -euf -o pipefail
 # Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
 ##
 
-hexdump -n 16 -v -e '16/1 "%02x" "\n"' /dev/random
+hexdump -n 16 -v -e '16/1 "%02x" "\n"' /dev/urandom

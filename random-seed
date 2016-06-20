@@ -2,11 +2,11 @@
 set -euf -o pipefail
 
 ##
-# Seed the bash random number generator using /dev/random
+# Seed the bash random number generator using /dev/urandom
 #
 # Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
 # License: GPL
 # Updated: 2015-01-25
 ##
 
-RANDOM=$(head -c4 /dev/random | od -t u4 | awk '{ print $2 }')
+RANDOM=$(head -c4 /dev/urandom | od -t u4 | awk '{ print $2 }')

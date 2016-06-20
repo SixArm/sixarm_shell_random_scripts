@@ -1,0 +1,22 @@
+#!/bin/bash
+set -euf -o pipefail
+
+##
+# Generate a random line that looks like a SSH keygen fingerprint.
+#
+# Usage:
+#
+#     random-ssh-fingerprint
+#
+# Example:
+#
+#     $ random-ssh-fingerprint
+#     256 SHA256:TotrDXxFMixUbaXOjx+JOiXQcwayIzKRZwRcXHRXbPAb 179.241.130.243 (ECDSA)
+#
+# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: GPL
+# Created: 2016-01-12
+# Updated: 2015-01-13
+##
+
+echo "256 SHA256:$(random-sha-256) $(random-ip-address) (ECDSA)"

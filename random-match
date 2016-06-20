@@ -21,12 +21,12 @@ set -euf -o pipefail
 #     random-match A-Z 6
 #     #=> ZMFKBT
 #
-# This implementation uses `/dev/random`
+# This implementation uses `/dev/urandom`
 # and `tr` to select matching characters.
 #
 # Depending on your own systems and security needs,
 # you may want to adjust this script by changing the
-# system command `/dev/random` to `/dev/urandom`.
+# system command `/dev/urandom` to `/dev/urandom`.
 # This change will make the script non-blocking.
 #
 #
@@ -37,4 +37,4 @@ set -euf -o pipefail
 
 characters=$1
 len=${2-1}
-LC_ALL=C < /dev/random tr -dc "$characters" | head -c"$len"
+LC_ALL=C < /dev/urandom tr -dc "$characters" | head -c"$len"

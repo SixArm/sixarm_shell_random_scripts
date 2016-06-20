@@ -1,0 +1,22 @@
+#!/bin/sh
+
+##
+# Generate a random time minute, in the range 0-59.
+#
+# Usage:
+#
+#     random-minute
+#
+# Examples:
+#
+#     $ random-minute
+#     #=> 59
+#
+# This script does NOT seed the shell random variable.
+#
+# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: GPL
+# Updated: 2015-10-18
+##
+
+echo $(( RANDOM % 60))

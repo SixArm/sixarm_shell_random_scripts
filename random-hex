@@ -20,13 +20,13 @@ set -euf -o pipefail
 #
 # Alternate solution for Linux, using the tr command:
 #
-#     cat /dev/random | tr -cd '0-9A-F' | head -c 16; echo
+#     cat /dev/urandom | tr -cd '0-9A-F' | head -c 16; echo
 #
 # Alternate solution for BSD and Mac OS X, using the tr command:
 #
-#     cat /dev/random | env LC_CTYPE=C tr -cd '0-9A-F' | head -c 16; echo
+#     cat /dev/urandom | env LC_CTYPE=C tr -cd '0-9A-F' | head -c 16; echo
 #
-# This implemenation uses the commands `hexdump` and `/dev/random`.
+# This implemenation uses the commands `hexdump` and `/dev/urandom`.
 #
 # Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
 # License: GPL
@@ -34,4 +34,4 @@ set -euf -o pipefail
 ##
 
 len=${1-16}
-hexdump -n $len -v -e '/1 "%02X"' -e "/$len \"\n\"" /dev/random
+hexdump -n $len -v -e '/1 "%02X"' -e "/$len \"\n\"" /dev/urandom

@@ -17,7 +17,7 @@ set -euf -o pipefail
 #     $ random-mac-address
 #     58:bc:f8:52:2b:c2
 #
-# This implementation uses `hexdump` and `/dev/random`.
+# This implementation uses `hexdump` and `/dev/urandom`.
 #
 # Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
 # License: GPL
@@ -25,4 +25,4 @@ set -euf -o pipefail
 ##
 
 len=${1-6}
-hexdump -n $len -e "$len/1 \"%02x:\"" /dev/random | sed 's/:$//'
+hexdump -n $len -e "$len/1 \"%02x:\"" /dev/urandom | sed 's/:$//'
