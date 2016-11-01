@@ -36,6 +36,7 @@ Random text generators for companies:
   * `random-apple-development-id`: Apple.com development id.
   * `random-aws-ses-smtp-username`: Amazon.com AWS SES SMTP username.
   * `random-aws-ses-smtp-password`: Amazon.com AWS SES SMTP password.
+  * `random-azure-subscription-id`: Microsoft.com Azure subscription id.
   * `random-crittercism-app-id`: Crittercism.com app id.
   * `random-etsy-api-key`: Etsy.com API key.
   * `random-etsy-shop-id`: Etsy.com shop id.
