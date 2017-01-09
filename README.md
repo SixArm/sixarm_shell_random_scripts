@@ -34,6 +34,7 @@ Random text generators:
 Random text generators for companies:
 
   * `random-apple-development-id`: Apple.com development id.
+  * `random-aws-pem-fingerprint`: Amazon.com AWS PEM key pair fingerprint.
   * `random-aws-ses-smtp-username`: Amazon.com AWS SES SMTP username.
   * `random-aws-ses-smtp-password`: Amazon.com AWS SES SMTP password.
   * `random-azure-subscription-id`: Microsoft.com Azure subscription id.

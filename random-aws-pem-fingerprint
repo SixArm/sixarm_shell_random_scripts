@@ -1,0 +1,28 @@
+#!/bin/bash
+set -euf -o pipefail
+
+##
+# Generate a random Amazon Web Services (AWS) PEM key pair fingerprint.
+#
+# Usage:
+#
+#     random-aws-pem-fingerprint [n]
+#
+# Options:
+#
+#   * `n` is the number of bytes; default is 20.
+#
+# Example:
+#
+#     $ random-aws-pem-fingerprint
+#     af:6f:ff:6f:0f:ff:f9:6f:31:40:f9:4f:f4:96:71:ff:0f:25:76:f5
+#
+# This implementation uses `hexdump` and `/dev/urandom`.
+#
+# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: GPL
+# Updated: 2017-01-08
+##
+
+len=${1-20}
+hexdump -n $len -e "$len/1 \"%02X:\"" /dev/urandom | sed 's/:$//' | tr A-F af
