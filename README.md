@@ -22,7 +22,7 @@ Random text generators:
   * [random-ip-address](random-ip-address): Typical IP address a.b.c.d, all in 130-250 for readability.
   * [random-password](random-password): Opimized password characters for high security needs.
   * [random-password-words](random-password-words): Memorable password of four random words from a text file.
-  * [random-salt`: Alphanumeric A-Z a-z 0-9, suitatable for `mkpasswd` and `/etc/shadow](random-salt`: Alphanumeric A-Z a-z 0-9, suitatable for `mkpasswd` and `/etc/shadow).
+  * [random-salt](random-salt): Alphanumeric A-Z a-z 0-9, suitable for `mkpasswd` and `/etc/shadow`.
   * [random-seed](random-seed): Seed the bash random number generator using /dev/urandom.
   * [random-sha-256](random-sha-256): SHA 256 appearance, A-Z a-z +, length 44.
   * [random-ssh-fingerprint](random-ssh-fingerprint): SSH fingerprint with SHA 256, IP address, type.
