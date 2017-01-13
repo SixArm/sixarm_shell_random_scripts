@@ -1,0 +1,47 @@
+#!/bin/sh
+set -euf
+
+##
+# Generate a random passphrase for high security needs.
+#
+# Usage:
+#
+#     random-passphrase [n]
+#
+# Options:
+#
+#     * n is an optional length; it defaults to 64.
+#
+# Example:
+#
+#     $ random-passphrase
+#     svwcsnvyvuapdmuxqatwdepvtjgvtwzadwfzvnwpsbdcbeufsedhyeywwxzxpymy
+#
+# This uses /dev/urandom to generate random characters.
+# This is high security and suitable for cryptography.
+#
+# This script then filters the characters to pick just the
+# ones that match these letters: abcdefghjkmnpqrstuvwxyz.
+#
+# The filter is for usability: these letters are best for
+# communicating to users and also typing on mobile devices.
+# We omit the letters "i", "l", "o" because we've learned
+# that in some fonts these look like numbers "1" and "0".
+#
+# Some password-checker tools may report these passwords
+# are insecure because they only have lowercase letters.
+# This is true *if* you are overriding the defaults by
+# using 8 letters or less; hackers have pre-computed all
+# short lowercase passwords using "rainbow table" lookups.
+#
+# We set our default to be 64 letters for pragmatic reasons:
+# we want the password to be reasonably strong yet still fit
+# on one line of a typical text console..
+#
+# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: GPL
+# Updated: 2017-01-13
+##
+
+len=${1-64}
+LC_ALL=C < /dev/urandom tr -dc "abcdefghjkmnpqrstuvwxyz" | head -c"$len"
