@@ -38,9 +38,12 @@ set -euf
 # we want the password to be reasonably strong yet still fit
 # on one line of a typical text console..
 #
-# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
-# License: GPL
+# Command: random-passphrase
+# Version: 3.0.0
+# Created: 2010-05-20
 # Updated: 2017-01-13
+# License: GPL
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
 ##
 
 len=${1-64}
