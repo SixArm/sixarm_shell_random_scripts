@@ -1,0 +1,24 @@
+#!/bin/sh
+set -euf -o pipefail
+
+##
+# Generate a random git commit hash.
+#
+# Usage:
+#
+#     random-git-commit-hash
+#
+# Example:
+#
+#     $ random-git-commit-hash
+#     37004A3B3427BE452DDB8E681EAB58A6
+#
+# This implemenation uses the commands `hexdump` and `/dev/urandom`.
+#
+# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: GPL
+# Updated: 2015-01-25
+##
+
+len=20
+hexdump -n $len -v -e '/1 "%02X"' -e "/$len \"\n\"" /dev/urandom | tr 'A-F' 'a-f'
