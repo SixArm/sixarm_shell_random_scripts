@@ -1,0 +1,38 @@
+#!/bin/bash
+set -euf -o pipefail
+
+##
+# Generate a secure random die roll 1-8
+#
+# Usage:
+#
+#     random-die-8 [n]
+#
+# Options:
+#
+#   * `n` is the number of characters; default is 1.
+#
+# Example:
+#
+#     random-die-8
+#     #=> 8
+#
+#     random-die-8 3
+#     #=> 814
+#
+# This implementation uses `/dev/urandom`
+# and `tr` to select matching characters.
+#
+# Depending on your own systems and security needs,
+# you may want to adjust this script by changing the
+# system command `/dev/urandom` to `/dev/urandom`.
+# This change will make the script non-blocking.
+#
+#
+# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: GPL
+# Updated: 2015-01-25
+##
+
+len=${1-1}
+LC_ALL=C < /dev/urandom tr -dc "12345678" | head -c"$len"
