@@ -1,0 +1,46 @@
+#!/usr/bin/awk -f
+
+##
+# Credit:
+#
+#   * Code: https://github.com/Francesco149/markov.sh
+#
+#   * Annotation: https://0x0f0f0f.github.io/posts/2019/11/really-fast-markov-chains-in-~20-lines-of-sh-grep-cut-and-awk/
+#
+# For example suppose we have a file named `log.txt` with this text:
+#
+#     hello everybody
+#     hi people
+#     hello people
+#     how are you
+#     how are things going
+#
+# The first step is creating a model for the Markov chain. 
+#
+# To create a model, we parse the file:
+#
+#     random-markov-chain-feed.awk < log.txt >> log-as-markov-model.txt
+#
+# The output is:
+#
+#     are things
+#     are you
+#     everybody
+#     going
+#     hello everybody
+#     hello people
+#     hi people
+#     how are
+#     how are
+#     people
+#     people
+#     things going
+#     you
+##
+
+{
+  for (i = 1; i < NF; i++) {
+    print $i,$(i+1)
+  }
+  print $i
+}
