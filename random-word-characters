@@ -27,5 +27,4 @@ set -euf -o pipefail
 # License: GPL
 # Updated: 2015-01-25
 ##
-
 random-match _A-Za-z ${1-16}

@@ -1,5 +1,5 @@
-#!/bin/bash
-set -euf -o pipefail
+#!/bin/sh
+set -euf
 
 ##
 # Generate a random Apple development id string.
@@ -8,7 +8,11 @@ set -euf -o pipefail
 #
 # Usage:
 #
-#     random-apple-development-id
+#     random-apple-development-id [n]
+#
+# Options:
+#
+#   * `n` is the number of characters; default is 10.
 #
 # Example:
 #
@@ -17,10 +21,10 @@ set -euf -o pipefail
 #
 # See http://developer.apple.com
 #
-#
-# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# Version: 2.0.0
+# Updated: 2020-03-24
 # License: GPL
-# Updated: 2015-01-25
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
 ##
 
-random-alphanum-upper 10
+random-ascii '[:upper:][:digit:]' "${1:-10}"

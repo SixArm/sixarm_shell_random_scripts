@@ -1,5 +1,5 @@
 #!/bin/sh
-set -euf -o pipefail
+set -euf
 
 ##
 # Generate a random git commit hash.
@@ -20,5 +20,4 @@ set -euf -o pipefail
 # Updated: 2015-01-25
 ##
 
-len=20
-hexdump -n $len -v -e '/1 "%02X"' -e "/$len \"\n\"" /dev/urandom | tr 'A-F' 'a-f'
+hexdump -n 20 -v -e '/1 "%02X"' -e "/20 \"\n\"" /dev/urandom | tr '[:upper:]' '[:lower:]'

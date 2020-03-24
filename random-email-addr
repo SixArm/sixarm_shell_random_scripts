@@ -1,0 +1,39 @@
+#!/bin/sh
+set -euf
+
+##
+# Generate a random email addr string.
+#
+# The string is lowercase.
+#
+# Usage:
+#
+#     random-email-addr
+#
+# Example:
+#
+#     $ random-email-addr
+#     jpkhbvlc@srzuffit.xvh
+#
+# This implementation does:
+#
+#   * 8 character username
+#
+#   * 8 character second-level domain name
+#
+#   * 3 character top-level domain name
+#
+# Example format:
+#
+#     xxxxxxxx@xxxxxxxx.xxx
+#
+# Version: 2.0.0
+# Updated: 2020-03-23
+# License: GPL
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+##
+
+user=$(random-ascii '[:lower:]' 8)
+sld=$(random-ascii '[:lower]' 8)
+tld=$(random-ascii '[:lower:]' 3)
+printf "%s@%s.%s" "$user" "$sld" "$tld"
