@@ -1,0 +1,27 @@
+#!/bin/sh
+set -euf
+
+##
+# Generate a random string that looks like a PGP key identifier.
+#
+# Usage:
+#
+#     random-pgp-key-id [n]
+#
+# Options:
+#
+#   * `n` is the number of characters; default is 40.
+#
+# Example:
+#
+#     $ random-pgp-key-id
+#     8191730CDC3EE29DA7CDE474B932B8AFC3D20BFB
+#
+# Version: 2.0.0
+# Updated: 2020-03-24
+# License: GPL
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+##
+
+random-ascii '0-9A-F' ${1-40}
+
