@@ -23,4 +23,4 @@ set -euf
 # Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
 ##
 
-random-ascii '[:alpha:]\+' ${1-44}
+random-ascii '[:alnum:]\+' ${1-44}
