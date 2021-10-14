@@ -1,0 +1,25 @@
+#!/bin/bash
+set -euf -o pipefail
+
+##
+# Generate a random Trello board id
+#
+# This is a 24 character lowercase hex string.
+#
+# Usage:
+#
+#     random-trello-board-id
+#
+# Example:
+#
+#     $ random-trello-board-id
+#     40ab84075d6a958ee6c5d5e8
+#
+# See https://www.trello.com/api
+#
+# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: GPL
+# Updated: 2021-10-14T15:07:48Z
+##
+
+random-hex-lower 12
