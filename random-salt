@@ -1,5 +1,5 @@
 #!/bin/sh
-set -euf -o pipefail
+set -euf
 
 ##
 # Generate a random salt string.
@@ -7,8 +7,9 @@ set -euf -o pipefail
 # The string is suitable for using with Linux passwords,
 # such as the `mkpasswd` command and `/etc/shadow` file.
 #
-#  * Characters are ASCII A-Z, a-z, 0-9.
-#  * Default ength 16.
+#  * Characters are ASCII alphanumeric
+#
+#  * Default length 16.
 #
 # Usage:
 #
@@ -19,9 +20,9 @@ set -euf -o pipefail
 #     $ random-salt
 #     zd05RAfxlh4Dg7F4
 #
-# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
-# License: GPL
-# Updated: 2015-01-25
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: BSD or MIT or GPL or contact us for custom license
+# Updated: 2021-10-14T17:58:40Z
 ##
 
-env LC_CTYPE=C LC_ALL=C tr -dc "a-zA-Z0-9" < /dev/urandom | head -c ${1-16}
+random-ascii '[:alnum:]' ${1-16}

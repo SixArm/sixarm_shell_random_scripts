@@ -1,5 +1,5 @@
-#!/bin/bash
-set -euf -o pipefail
+#!/bin/sh
+set -euf
 
 ##
 # Generate a random Amazon Web Services (AWS) PEM key pair fingerprint.
@@ -19,10 +19,9 @@ set -euf -o pipefail
 #
 # This implementation uses `hexdump` and `/dev/urandom`.
 #
-# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
-# License: GPL
-# Updated: 2017-01-08
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: BSD or MIT or GPL or contact us for custom license
+# Updated: 2021-10-14T17:58:40Z
 ##
 
-len=${1-20}
-hexdump -n $len -e "$len/1 \"%02X:\"" /dev/urandom | sed 's/:$//' | tr A-F af
+random-hex-lower-fingerprint "${1:-20}"

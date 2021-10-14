@@ -1,5 +1,5 @@
 #!/bin/sh
-set -euf -o pipefail
+set -euf
 
 ##
 # Generate a random Trello short link.
@@ -8,18 +8,18 @@ set -euf -o pipefail
 #
 # Usage:
 #
-#     random-trello-short-link
+#     random-trello-short-link [n]
 #
 # Example:
 #
 #     $ random-trello-short-link
-#     627af3ciipjhja1irz28j4mu
+#     6x7af3cq3
 #
 # See https://www.trello.com/api/
-##
-# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
-# License: GPL
-# Updated: 2021-10-14T15:03:47Z
+#
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: BSD or MIT or GPL or contact us for custom license
+# Updated: 2021-10-14T17:58:40Z
 ##
 
-random-alphanum 8
+random-ascii '[:alnum:]' "${1:-8}"

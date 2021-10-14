@@ -1,5 +1,5 @@
 #!/bin/sh
-set -euf -o pipefail
+set -euf
 
 ##
 # Generate a random LinkedIn app API key,
@@ -8,7 +8,7 @@ set -euf -o pipefail
 #
 # Usage:
 #
-#     random-linkedin-app-api-key
+#     random-linkedin-app-api-key [n]
 #
 # Example:
 #
@@ -17,9 +17,9 @@ set -euf -o pipefail
 #
 # See http://linkedin.com
 #
-# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
-# License: GPL
-# Updated: 2015-01-25
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: BSD or MIT or GPL or contact us for custom license
+# Updated: 2021-10-14T17:58:40Z
 ##
 
-random-alphanum-lower 12
+random-ascii '[:lower:][:digit:]' "${1:-12}"

@@ -1,5 +1,5 @@
-#!/bin/bash
-set -euf -o pipefail
+#!/bin/sh
+set -euf
 
 ##
 # Generate a random Crittercism.com App Id string.
@@ -8,7 +8,7 @@ set -euf -o pipefail
 #
 # Usage:
 #
-#     random-crittercism-app-id
+#     random-crittercism-app-id [n]
 #
 # Example:
 #
@@ -17,10 +17,9 @@ set -euf -o pipefail
 #
 # See http://crittercism.com
 #
-#
-# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
-# License: GPL
-# Updated: 2015-01-25
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: BSD or MIT or GPL or contact us for custom license
+# Updated: 2021-10-14T17:58:40Z
 ##
 
-random-alphanum-lower 24
+random-ascii '[:lower:][:dight:]' "${1:-24}"

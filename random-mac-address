@@ -1,5 +1,5 @@
 #!/bin/sh
-set -euf -o pipefail
+set -euf
 
 ##
 # Generate a random hex MAC address.
@@ -19,10 +19,9 @@ set -euf -o pipefail
 #
 # This implementation uses `hexdump` and `/dev/urandom`.
 #
-# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
-# License: GPL
-# Updated: 2015-01-25
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: BSD or MIT or GPL or contact us for custom license
+# Updated: 2021-10-14T17:58:40Z
 ##
 
-len=${1-6}
-hexdump -n $len -e "$len/1 \"%02x:\"" /dev/urandom | sed 's/:$//'
+random-hex-lower-fingerprint ${1-6}

@@ -6,7 +6,7 @@ set -euf
 #
 # Usage:
 #
-#     random-sha-256 [n]
+#     random-sha-256-checksum [n]
 #
 # Options:
 #
@@ -17,10 +17,9 @@ set -euf
 #     $ random-sha-256
 #     IBYMhAiRHPDJAamWSafFk+XirjkiTFqEGSFTOnWWTAVS
 #
-# Version: 2.0.0
-# Updated: 2020-03-24
-# License: GPL
 # Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: BSD or MIT or GPL or contact us for custom license
+# Updated: 2021-10-14T17:58:40Z
 ##
 
 random-ascii '[:alnum:]\+' ${1-44}

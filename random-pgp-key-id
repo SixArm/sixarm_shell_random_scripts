@@ -17,11 +17,10 @@ set -euf
 #     $ random-pgp-key-id
 #     8191730CDC3EE29DA7CDE474B932B8AFC3D20BFB
 #
-# Version: 2.0.0
-# Updated: 2020-03-24
-# License: GPL
 # Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: BSD or MIT or GPL or contact us for custom license
+# Updated: 2021-10-14T17:58:40Z
 ##
 
-random-ascii '0-9A-F' ${1-40}
+random-hex-upper ${1-40}
 

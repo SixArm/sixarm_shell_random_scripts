@@ -1,5 +1,5 @@
-#!/bin/bash
-set -euf -o pipefail
+#!/bin/sh
+set -euf
 
 ##
 # Generate a random string of word characters.
@@ -22,9 +22,9 @@ set -euf -o pipefail
 #     $ random-word-characters 8
 #     YpGm_pmE
 #
-#
-# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
-# License: GPL
-# Updated: 2015-01-25
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: BSD or MIT or GPL or contact us for custom license
+# Updated: 2021-10-14T17:58:40Z
 ##
-random-match _A-Za-z ${1-16}
+
+random-ascii '[:alnum:]_' ${1-16}

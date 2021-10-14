@@ -1,5 +1,5 @@
-#!/bin/bash
-set -euf -o pipefail
+#!/bin/sh
+set -euf
 
 ##
 # Generate a random Microsoft Azure subscription id string.
@@ -16,9 +16,9 @@ set -euf -o pipefail
 # This script uses the commands `hexdump` and `/dev/urandom`
 # to generate secure random numbers and format them.
 #
-# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
-# License: GPL
-# Updated: 2016-11-01
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: BSD or MIT or GPL or contact us for custom license
+# Updated: 2021-10-14T17:58:40Z
 ##
 
-hexdump -n 16 -v -e '4/1 "%02x" "-" 2/1 "%02x" "-" 2/1 "%02x" "-" 2/1 "%02x" "-" 6/1 "%02x" "\n"' /dev/urandom
+random-uuid-lower

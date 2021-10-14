@@ -13,10 +13,9 @@ set -euf
 #     $ random-ip-address
 #     128.129.130.131
 #
-# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
-# License: GPL
-# Created: 2016-01-12
-# Updated: 2015-01-13
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: BSD or MIT or GPL or contact us for custom license
+# Updated: 2021-10-14T17:58:40Z
 ##
 
 a=$(( 130 + $(( $RANDOM % 120 ))))

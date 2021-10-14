@@ -1,5 +1,5 @@
-#!/bin/bash
-set -euf -o pipefail
+#!/bin/sh
+set -euf
 
 ##
 # Generate a random bcrypt salt string.
@@ -24,10 +24,10 @@ set -euf -o pipefail
 # information; in other words, two salts can differ in the
 # final character yet still produce the same crypt text.
 #
-#
-# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
-# License: GPL
-# Updated: 2015-01-25
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: BSD or MIT or GPL or contact us for custom license
+# Updated: 2021-10-14T17:58:40Z
 ##
 
-echo '$2a$07$'$(random-alphanum ${1-22})
+x=$(random-ascii-alnum "${1-22}")
+echo '$2a$07$'$x

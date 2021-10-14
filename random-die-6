@@ -1,5 +1,5 @@
-#!/bin/bash
-set -euf -o pipefail
+#!/bin/sh
+set -euf
 
 ##
 # Generate a secure random die roll 1-6
@@ -28,10 +28,9 @@ set -euf -o pipefail
 # system command `/dev/urandom` to `/dev/urandom`.
 # This change will make the script non-blocking.
 #
-#
-# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
-# License: GPL
-# Updated: 2015-01-25
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: BSD or MIT or GPL or contact us for custom license
+# Updated: 2021-10-14T17:58:40Z
 ##
 
 len=${1-1}

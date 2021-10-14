@@ -20,8 +20,8 @@ set -euf
 # Command: random-passphrase
 # Version: 4.0.0
 # Created: 2010-05-20
-# Updated: 2017-01-13
-# License: GPL
+# Updated: 2021-10-14T17:58:40Z
+# License: BSD or MIT or GPL or contact us for custom license
 # Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
 ##
 

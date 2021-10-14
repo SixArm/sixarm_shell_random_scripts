@@ -4,15 +4,7 @@ All these methods generate random text by using the secure /dev/urandom source.
 
 Random text generators:
 
-  * [random-alpha](random-alpha): Alphabetic A-Z a-z.
-  * [random-alpha-lower](random-alpha-lower): Alphabetic lower case a-z.
-  * [random-alpha-upper](random-alpha-upper): Alphabetic upper case A-Z.
-  * [random-alphanum](random-alphanum): Alphanumeric A-Z a-z 0-9.
   * [random-bcrypt-salt](random-bcrypt-salt): String for bcrypt salt for encryption.
-  * [random-digits](random-digits): Digits 0-9.
-  * [random-digits-faster](random-digits-faster): Digits 0-9, skipping the seed.
-  * [random-hex](random-hex): Hex digits 0-9 a-z.
-  * [random-hex-fingerprint](random-hex-fingerprint): Hex digits formatted as a fingerprint.
   * [random-mac-address](random-mac-address): A media access control address (MAC address).
   * [random-match](random-match): Match a set of characters given as an argument.
   * [random-md5](random-md5): MD5 sum, calling either md5sum or md5 command.

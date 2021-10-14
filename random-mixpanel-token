@@ -1,10 +1,10 @@
-#!/bin/bash
-set -euf -o pipefail
+#!/bin/sh
+set -euf
 
 ##
 # Generate a random Mixpanel.com token.
 #
-# This is a 32 character lowercase hex string.
+# This is a 32 character hexadecimal lowercase string.
 #
 # Usage:
 #
@@ -17,9 +17,9 @@ set -euf -o pipefail
 #
 # See http://mixpanel.com
 #
-# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
-# License: GPL
-# Updated: 2015-01-25
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: BSD or MIT or GPL or contact us for custom license
+# Updated: 2021-10-14T17:58:40Z
 ##
 
-random-hex 16 | tr A-Z a-z
+random-hex-lower ${1-16}

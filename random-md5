@@ -15,10 +15,9 @@ set -euf
 #
 # This implementation uses `md5sum` or `md5`.
 #
-#
-# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
-# License: GPL
-# Updated: 2015-01-25
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: BSD or MIT or GPL or contact us for custom license
+# Updated: 2021-10-14T17:58:40Z
 ##
 
 md5=$(which md5sum md5 | grep -v "not found" | head -1)

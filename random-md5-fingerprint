@@ -15,10 +15,9 @@ set -euf
 #
 # This implementation uses `random-md5`.
 #
-# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
-# License: GPL
-# Created: 2016-01-12
-# Updated: 2016-01-13
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: BSD or MIT or GPL or contact us for custom license
+# Updated: 2021-10-14T17:58:40Z
 ##
 
 random-md5 | sed 's/\(..\)/\1:/g; s/:$//'

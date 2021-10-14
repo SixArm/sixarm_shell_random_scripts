@@ -6,7 +6,7 @@ set -euf
 #
 # Usage:
 #
-#     random-git-commit-hash
+#     random-git-commit-hash [n]
 #
 # Example:
 #
@@ -15,9 +15,9 @@ set -euf
 #
 # This implemenation uses the commands `hexdump` and `/dev/urandom`.
 #
-# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
-# License: GPL
-# Updated: 2015-01-25
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: BSD or MIT or GPL or contact us for custom license
+# Updated: 2021-10-14T17:58:40Z
 ##
 
-hexdump -n 20 -v -e '/1 "%02X"' -e "/20 \"\n\"" /dev/urandom | tr '[:upper:]' '[:lower:]'
+random-hex-upper "${1:-20}"
