@@ -1,0 +1,25 @@
+#!/bin/sh
+set -euf -o pipefail
+
+##
+# Generate a random Trello short link.
+#
+# The string is alphanumeric, mixed case, 8 characters.
+#
+# Usage:
+#
+#     random-trello-short-link
+#
+# Example:
+#
+#     $ random-trello-short-link
+#     627af3ciipjhja1irz28j4mu
+#
+# See https://www.trello.com/api/
+##
+# Author: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: GPL
+# Updated: 2021-10-14T15:03:47Z
+##
+
+random-alphanum 8
