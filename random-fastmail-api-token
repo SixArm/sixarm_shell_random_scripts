@@ -1,0 +1,28 @@
+#!/bin/sh
+set -euf
+
+##
+# Generate a Fastmail API token placeholder.
+#
+# Usage:
+#
+#     random-fastmail-api-token
+#
+# Options:
+#
+#   * `n` is the number of characters; default is 20.
+#
+# Example:
+#
+#     $ random-fastmail-api-token
+#     fmu1-564bfa66-56f8d5daa338841212d57ca4b597fe16-0-7620862d985d37617821817376357211
+#
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# License: BSD or MIT or GPL or contact us for custom license
+# Updated: 2024-11-12T17:58:40Z
+##
+
+printf 'fmu1-%s-%s-0-%s\n' \
+"$(random-ascii-xdigit-lower 8)" \
+"$(random-ascii-xdigit-lower 32)" \
+"$(random-ascii-xdigit-lower 32)"
